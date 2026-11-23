@@ -1,0 +1,576 @@
+/* 云端乐律 —— 音乐播放器样式（日间 / 暗夜双主题） */
+:root {
+  --gm-accent: #7c5cff;
+  --gm-accent-light: #9b7cff;
+  --gm-text: #2f3042;
+  --gm-muted: #8c8fa6;
+  --gm-panel: rgba(255, 255, 255, .58);
+  --gm-panel-border: rgba(255, 255, 255, .72);
+  --gm-panel-shadow: 0 16px 40px rgba(70, 80, 120, .14);
+  --gm-track: rgba(70, 70, 100, .14);
+  --gm-chip: rgba(255, 255, 255, .78);
+  --gm-bg-overlay: linear-gradient(135deg, rgba(255, 255, 255, .78), rgba(198, 208, 238, .38));
+  --gm-lrc-active: #6c4fe0;
+}
+
+body.gm-night {
+  --gm-text: #ededf8;
+  --gm-muted: #a6a3c4;
+  --gm-panel: rgba(22, 22, 36, .68);
+  --gm-panel-border: rgba(255, 255, 255, .1);
+  --gm-panel-shadow: 0 20px 50px rgba(4, 4, 16, .5);
+  --gm-track: rgba(255, 255, 255, .16);
+  --gm-chip: rgba(255, 255, 255, .08);
+  --gm-bg-overlay: linear-gradient(135deg, rgba(12, 12, 28, .84), rgba(38, 24, 74, .62));
+  --gm-lrc-active: #a78bfa;
+}
+
+/* 音乐馆页头 */
+body.gm-has-page-player .article-header .label-pill {
+  display: none;
+}
+body.gm-has-page-player .article-header h1 {
+  font-family: Georgia, "Times New Roman", "Songti SC", serif;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+.gm-page-subtitle {
+  margin: 2px 0 20px 2px;
+  font-size: 12px;
+  letter-spacing: .18em;
+  color: var(--gm-muted);
+}
+.gm-page-note {
+  text-align: center;
+  font-size: 12px;
+  color: var(--gm-muted);
+  margin-top: 18px;
+}
+.gm-page-note a {
+  color: var(--gm-accent);
+  text-decoration: none;
+  border-bottom: 1px dashed currentColor;
+}
+
+.gm-page-wrap {
+  padding: 0 0 6px;
+}
+.gm-stage {
+  display: grid;
+  grid-template-columns: 372px minmax(0, 1fr);
+  gap: 18px;
+  padding: 18px;
+}
+
+/* 卡片通用 */
+.gm-card {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--gm-panel);
+  border: 1px solid var(--gm-panel-border);
+  box-shadow: var(--gm-panel-shadow);
+  color: var(--gm-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  backdrop-filter: blur(20px) saturate(140%);
+  animation: gm-rise .45s cubic-bezier(.2, .8, .2, 1) both;
+}
+.gm-card__bg {
+  position: absolute;
+  inset: -40px;
+  z-index: -2;
+  background-size: cover;
+  background-position: center;
+  filter: blur(40px) brightness(1.05) saturate(125%);
+  transform: scale(1.18);
+  opacity: .5;
+}
+.gm-card__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--gm-bg-overlay);
+}
+body.gm-night .gm-card__bg {
+  filter: blur(40px) brightness(.5) saturate(135%);
+  opacity: .8;
+}
+
+/* 左侧：唱片与播放控制 */
+.gm-card--player {
+  height: 500px;
+  padding: 30px 26px 26px;
+  display: flex;
+  flex-direction: column;
+}
+.gm-vinyl-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 6px 0 24px;
+}
+.gm-vinyl {
+  position: relative;
+  width: 186px;
+  height: 186px;
+  border-radius: 50%;
+  padding: 8px;
+  background: linear-gradient(145deg, #faf9ff, #cbd0e8);
+  box-shadow: 0 14px 32px rgba(70, 70, 120, .26), inset 0 0 0 1px rgba(255, 255, 255, .85);
+}
+body.gm-night .gm-vinyl {
+  background: linear-gradient(145deg, #403d60, #1d1c30);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, .5), inset 0 0 0 1px rgba(255, 255, 255, .12);
+}
+.gm-vinyl img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.gm-vinyl::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .4);
+  pointer-events: none;
+}
+.gm-vinyl-hole {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+}
+body.gm-night .gm-vinyl-hole {
+  background: #d9d5f5;
+}
+
+.gm-song {
+  text-align: center;
+  margin-bottom: 22px;
+}
+.gm-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--gm-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.gm-artist {
+  margin-top: 5px;
+  font-size: 12px;
+  color: var(--gm-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gm-progress {
+  margin-top: auto;
+}
+.gm-track {
+  position: relative;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--gm-track);
+  cursor: pointer;
+}
+.gm-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #f0a25a, #ffcb88);
+}
+.gm-dot {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #df7d2e;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 3px rgba(223, 125, 46, .16);
+  pointer-events: none;
+}
+body.gm-night .gm-fill {
+  background: linear-gradient(90deg, var(--gm-accent), var(--gm-accent-light));
+}
+body.gm-night .gm-dot {
+  background: var(--gm-accent-light);
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, .22);
+}
+.gm-time {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 10px;
+  color: var(--gm-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.gm-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  margin-top: 16px;
+  padding: 0 4px;
+}
+.gm-btn {
+  display: grid;
+  place-items: center;
+  padding: 6px;
+  border: 0;
+  background: transparent;
+  color: var(--gm-muted);
+  cursor: pointer;
+  transition: transform .18s ease, color .18s ease;
+}
+.gm-btn:hover {
+  color: var(--gm-accent);
+  transform: scale(1.1);
+}
+.gm-btn:active {
+  transform: scale(.94);
+}
+.gm-btn svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+}
+.gm-play {
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  border-radius: 50%;
+  color: #fff;
+  background: linear-gradient(135deg, #8a6bff, #6c4fe0);
+  box-shadow: 0 10px 24px rgba(108, 79, 224, .48);
+}
+.gm-play svg {
+  width: 20px;
+  height: 20px;
+}
+.gm-play:hover {
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(108, 79, 224, .66);
+}
+
+.gm-hint {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 11px;
+  color: #e07b6a;
+}
+.gm-hint:empty {
+  display: none;
+}
+
+/* 主题切换按钮 */
+.gm-theme-toggle {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 3;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--gm-panel-border);
+  background: var(--gm-chip);
+  color: var(--gm-muted);
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  transition: color .2s ease, transform .2s ease;
+}
+.gm-theme-toggle:hover {
+  color: var(--gm-accent);
+  transform: rotate(18deg);
+}
+
+/* 右侧：歌词 / 歌单 */
+.gm-card--side {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.gm-tabs {
+  display: flex;
+  justify-content: center;
+  padding: 20px 20px 14px;
+}
+.gm-tab-group {
+  display: flex;
+  padding: 4px;
+  border-radius: 999px;
+  background: var(--gm-chip);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, .06);
+}
+.gm-tab {
+  border: 0;
+  background: transparent;
+  color: var(--gm-muted);
+  font-size: 12px;
+  letter-spacing: .08em;
+  padding: 7px 24px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color .2s ease;
+}
+.gm-tab:hover {
+  color: var(--gm-accent);
+}
+.gm-tab.is-active {
+  color: #fff;
+  background: linear-gradient(135deg, var(--gm-accent), var(--gm-accent-light));
+  box-shadow: 0 4px 12px rgba(124, 92, 255, .38);
+}
+.gm-panel {
+  position: relative;
+  display: none;
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 8px 26px 26px;
+  scrollbar-width: thin;
+}
+.gm-panel.is-active {
+  display: block;
+}
+.gm-panel::-webkit-scrollbar {
+  width: 5px;
+}
+.gm-panel::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(124, 92, 255, .3);
+}
+
+.gm-lyrics {
+  position: relative;
+  text-align: center;
+  padding-top: 18px;
+}
+.gm-credit {
+  font-size: 13px;
+  line-height: 2.05;
+  color: var(--gm-muted);
+}
+.gm-credit--main {
+  color: var(--gm-lrc-active);
+  font-weight: 600;
+}
+.gm-lrc-line {
+  font-size: 13px;
+  line-height: 2.1;
+  color: var(--gm-muted);
+  transition: color .25s ease, transform .25s ease;
+}
+.gm-lrc-line.is-active {
+  color: var(--gm-lrc-active);
+  font-weight: 600;
+  transform: scale(1.03);
+}
+.gm-lrc-empty {
+  margin-top: 90px;
+  font-size: 12px;
+  color: var(--gm-muted);
+  letter-spacing: .1em;
+}
+
+.gm-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background .18s ease;
+}
+.gm-list-item:hover,
+.gm-list-item.is-active {
+  background: rgba(124, 92, 255, .12);
+}
+.gm-list-index {
+  width: 22px;
+  flex: none;
+  font-size: 11px;
+  color: var(--gm-muted);
+  font-variant-numeric: tabular-nums;
+}
+.gm-list-title {
+  flex: 1;
+  min-width: 0;
+  font-size: 13px;
+  color: var(--gm-text);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.gm-list-artist {
+  flex: none;
+  max-width: 40%;
+  font-size: 11px;
+  color: var(--gm-muted);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.gm-list-item.is-active .gm-list-title {
+  color: var(--gm-accent);
+  font-weight: 600;
+}
+
+/* 全站悬浮播放器 */
+.gm-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+.gm-float .gm-card {
+  display: none;
+  width: 320px;
+}
+.gm-float.is-open .gm-card {
+  display: block;
+  animation: gm-pop .22s cubic-bezier(.2, .8, .2, 1) both;
+}
+.gm-float .gm-card--compact {
+  padding: 22px 20px 18px;
+  min-height: 0;
+}
+.gm-float .gm-vinyl-wrap {
+  padding: 0 0 16px;
+}
+.gm-float .gm-vinyl {
+  width: 96px;
+  height: 96px;
+  padding: 5px;
+}
+.gm-float .gm-vinyl-hole {
+  width: 18px;
+  height: 18px;
+}
+.gm-float .gm-theme-toggle,
+.gm-float .gm-loop,
+.gm-float .gm-mute {
+  display: none;
+}
+.gm-fab {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, .24);
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  background: linear-gradient(135deg, #8a6bff, #6c4fe0);
+  box-shadow: 0 10px 28px rgba(32, 20, 80, .35);
+  transition: transform .2s ease;
+}
+.gm-fab:hover {
+  transform: scale(1.07);
+}
+.gm-fab-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .92;
+}
+.gm-fab::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 14, 48, .2);
+}
+.gm-fab.is-playing::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 2px solid transparent;
+  border-top-color: var(--gm-accent-light);
+  border-right-color: rgba(167, 139, 250, .55);
+  border-radius: 50%;
+  animation: gm-spin 2.6s linear infinite;
+}
+.gm-fab-note {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  opacity: .9;
+}
+.gm-fab-note svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, .5));
+}
+
+body.gm-has-page-player .gm-float {
+  display: none;
+}
+
+@keyframes gm-spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes gm-pop {
+  from { opacity: 0; transform: translateY(10px) scale(.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes gm-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+  .gm-stage {
+    grid-template-columns: 1fr;
+  }
+  .gm-card--player,
+  .gm-card--side {
+    height: auto;
+  }
+  .gm-card--side {
+    height: 460px;
+  }
+}
+@media (max-width: 760px) {
+  .gm-float {
+    right: 14px;
+    bottom: 14px;
+  }
+  .gm-float .gm-card {
+    width: min(320px, calc(100vw - 28px));
+  }
+  body.gm-has-page-player .article-header h1 {
+    font-size: 30px;
+  }
+  .gm-stage {
+    padding: 12px;
+    border-radius: 20px;
+  }
+}

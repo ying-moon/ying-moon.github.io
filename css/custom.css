@@ -1,50 +1,36 @@
-/* ============================================================
-   相册页自定义样式
-   结构：1.版面加宽  2.瀑布流布局  3.相纸照片  4.悬停效果
-        5.查看器微调  6.响应式
-   （点击放大由 /js/gallery-zoom.js 的 Viewer.js 接管）*/
-
-/* --- 1. 版面加宽（仅相册页生效；主题默认 1300px）--- */
-.paper-shell:has(.gallery-grid) {
-  width: min(96vw, 1450px);
+.polaroid-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:24px;
+  padding:30px 10px;
 }
-
-/* --- 2. 瀑布流：4 列，照片按原始比例紧密堆叠 --- */
-.gallery-grid {
-  columns: 4;
-  column-gap: 16px;
-}
-
-.gallery-grid img {
-  break-inside: avoid;        /* 防止单张照片被拆到两列 */
-}
-
-/* --- 3. 照片：白色相纸边框 + 轻微倾斜的"散落照片"感 --- */
-.gallery-grid img {
-  display: block;
-  width: 100%;
-  height: auto;               /* 保持原始宽高比 */
-  border-radius: 2px;         /* 相纸感小圆角 */
-  margin-bottom: 18px;        /* 同列上下间距 */
-  padding: 6px;               /* 相纸白边；拍立得效果改：padding: 6px 6px 14px 6px */
+.polaroid-item {
   background: #fff;
-  box-shadow: 0 2px 8px rgba(60, 40, 20, 0.18);
-  transform: rotate(1deg);    /* 倾斜角度；想完全摆正改 0deg */
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  cursor: zoom-in;            /* 放大镜指针 */
+  padding:12px 12px 32px;
+  border-radius:4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  transform: rotate(var(--r, -4deg));
+  transition: all 0.35s ease;
+  width: 210px;
 }
-
-/* --- 4. 悬停：摆正 + 轻微放大，像拿起这张照片 --- */
-.gallery-grid img:hover {
-  transform: rotate(0deg) scale(1.03);
-  box-shadow: 0 6px 16px rgba(60, 40, 20, 0.28);
-  position: relative;
-  z-index: 1;
+.polaroid-item:nth-child(2n) { --r: 3deg; }
+.polaroid-item:nth-child(3n) { --r: -2.5deg; }
+.polaroid-item:nth-child(4n) { --r: 2deg; }
+.polaroid-item:hover {
+  transform: rotate(0deg) translateY(-5px);
+  box-shadow: 0 12px 15px rgba(0,0,0,0.18);
 }
-
-/* --- 5. 查看器微调：蒙层加深，更接近 poetize 的沉浸感 --- */
-.viewer-backdrop { background: rgba(0, 0, 0, 0.85); }
-
-/* --- 6. 响应式：平板 2 列，手机 1 列 --- */
-@media (max-width: 960px) { .gallery-grid { columns: 2; } }
-@media (max-width: 560px) { .gallery-grid { columns: 1; } }
+.polaroid-item img {
+  width:100%;
+  display:block;
+  aspect-ratio:1/1;
+  object-fit:cover;
+}
+.polaroid-text {
+  margin-top:10px;
+  text-align:center;
+  font-family: "KaiTi", serif;
+  color:#444;
+  font-size:14px;
+}
