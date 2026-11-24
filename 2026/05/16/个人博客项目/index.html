@@ -1,7 +1,98 @@
 <!doctype html>
 
 <html lang="zh-CN" data-fancybox-enabled="1">
-<head>
+<head><!-- hexo injector head_begin start --><style type="text/css">.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end -->
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f7f3e9" data-flatpaper-theme-color>
@@ -14,17 +105,17 @@
 <meta property="og:site_name" content="欢迎来我的的小窝">
 <meta property="og:description" content="一、环境准备与hexo初始化1、安装前置软件 Node.js下载16.x及以上版本 Git 官网下载 2、打开终端，验证安装 123node -v npm -vgit --version 3、 全局安装 Hexo 1npm install -g hexo-cli 4、初始化博客找一个空文件夹，执行： 123hexo init my-blogcd my-blo...">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/images/gallery/photo2.jpg">
+<meta property="og:image" content="http://example.com/images/cover/photo6.jpg">
 <meta property="article:published_time" content="2026-05-15T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-11-19T16:07:01.165Z">
+<meta property="article:modified_time" content="2026-11-24T15:34:06.517Z">
 <meta property="article:author" content="七七">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/images/gallery/photo2.jpg">
+<meta name="twitter:image" content="http://example.com/images/cover/photo6.jpg">
 <link rel="canonical" href="http://example.com/2026/05/16/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE/">
 
 <link rel="icon" href="/images/favicon.png" type="image/png">
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"hexo个人博客搭建","name":"hexo个人博客搭建 | 欢迎来我的的小窝","description":"一、环境准备与hexo初始化1、安装前置软件 Node.js下载16.x及以上版本 Git 官网下载 2、打开终端，验证安装 123node -v npm -vgit --version 3、 全局安装 Hexo 1npm install -g hexo-cli 4、初始化博客找一个空文件夹，执行： 123hexo init my-blogcd my-blo...","url":"http://example.com/2026/05/16/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE/","inLanguage":"zh-CN","isPartOf":{"@type":"WebSite","name":"欢迎来我的的小窝","url":"http://example.com/"},"image":["http://example.com/images/gallery/photo2.jpg"],"mainEntityOfPage":"http://example.com/2026/05/16/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE/","datePublished":"2026-05-15T16:00:00.000Z","dateModified":"2026-11-19T16:07:01.165Z","author":{"@type":"Person","name":"七七"},"publisher":{"@type":"Organization","name":"欢迎来我的的小窝"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"hexo个人博客搭建","name":"hexo个人博客搭建 | 欢迎来我的的小窝","description":"一、环境准备与hexo初始化1、安装前置软件 Node.js下载16.x及以上版本 Git 官网下载 2、打开终端，验证安装 123node -v npm -vgit --version 3、 全局安装 Hexo 1npm install -g hexo-cli 4、初始化博客找一个空文件夹，执行： 123hexo init my-blogcd my-blo...","url":"http://example.com/2026/05/16/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE/","inLanguage":"zh-CN","isPartOf":{"@type":"WebSite","name":"欢迎来我的的小窝","url":"http://example.com/"},"image":["http://example.com/images/cover/photo6.jpg"],"mainEntityOfPage":"http://example.com/2026/05/16/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE/","datePublished":"2026-05-15T16:00:00.000Z","dateModified":"2026-11-24T15:34:06.517Z","author":{"@type":"Person","name":"七七"},"publisher":{"@type":"Organization","name":"欢迎来我的的小窝"}}</script>
 
 <script>
   (function () {
@@ -147,9 +238,9 @@
       
     
       
-        <a class="site-nav-link " href="/gallery/">
+        <a class="site-nav-link " href="/cover/">
           
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gallery-horizontal flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-gallery-horizontal"></use></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cover-horizontal flatpaper-icon" aria-hidden="true"><circle cx="12" cy="12" r="3"/></svg>
 
           <span>相册</span>
         </a>
@@ -209,18 +300,18 @@
           </button>
           <div class="site-nav-menu" role="menu">
             
-              <a role="menuitem" class="" href="/favorites/">
-                
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gift flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-gift"></use></svg>
-
-                <span>好物分享</span>
-              </a>
-            
               <a role="menuitem" class="" href="/movies/">
                 
 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-film flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-film"></use></svg>
 
-                <span>观影笔记</span>
+                <span>观影集</span>
+              </a>
+            
+              <a role="menuitem" class="" href="/books/">
+                
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-book"></use></svg>
+
+                <span>书单</span>
               </a>
             
           </div>
@@ -354,9 +445,9 @@
         
       
         
-          <a class="" href="/gallery/">
+          <a class="" href="/cover/">
             
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gallery-horizontal flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-gallery-horizontal"></use></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cover-horizontal flatpaper-icon" aria-hidden="true"><circle cx="12" cy="12" r="3"/></svg>
 
             <span>相册</span>
           </a>
@@ -416,18 +507,18 @@
             </button>
             <div class="drawer-nav-children">
               
-                <a class="" href="/favorites/">
-                  
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gift flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-gift"></use></svg>
-
-                  <span>好物分享</span>
-                </a>
-              
                 <a class="" href="/movies/">
                   
 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-film flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-film"></use></svg>
 
-                  <span>观影笔记</span>
+                  <span>观影集</span>
+                </a>
+              
+                <a class="" href="/books/">
+                  
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-book"></use></svg>
+
+                  <span>书单</span>
                 </a>
               
             </div>
@@ -580,7 +671,7 @@
         </li>
       
         <li>
-          <a class="recent-item" href="/2026/11/20/05-%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%90%83%E9%A5%AD%E7%9A%84%E7%AC%AC%E4%B8%83%E5%A4%A9/">
+          <a class="recent-item" href="/2026/11/20/%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%90%83%E9%A5%AD%E7%9A%84%E7%AC%AC%E4%B8%83%E5%A4%A9/">
             <strong>一个人吃饭的第七天</strong>
             <em>2026-11-20</em>
           </a>
@@ -780,7 +871,7 @@
             
 <div class="paper-thumb paper-thumb-1 paper-thumb--cover">
   
-    <img class="paper-thumb__img" src="/images/gallery/photo1.jpg" alt="nginx安装部署" loading="lazy" referrerpolicy="no-referrer">
+    <img class="paper-thumb__img" src="/images/cover/photo1.jpg" alt="nginx安装部署" loading="lazy" referrerpolicy="no-referrer">
   
 </div>
 
@@ -812,7 +903,7 @@
             
 <div class="paper-thumb paper-thumb-0 paper-thumb--cover">
   
-    <img class="paper-thumb__img" src="/images/gallery/photo3.jpg" alt="Git 本地提交到远程仓库命令手册" loading="lazy" referrerpolicy="no-referrer">
+    <img class="paper-thumb__img" src="/images/cover/photo3.jpg" alt="Git 本地提交到远程仓库命令手册" loading="lazy" referrerpolicy="no-referrer">
   
 </div>
 

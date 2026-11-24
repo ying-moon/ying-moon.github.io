@@ -1,31 +1,122 @@
 <!doctype html>
 
 <html lang="zh-CN" data-fancybox-enabled="1">
-<head>
+<head><!-- hexo injector head_begin start --><style type="text/css">.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end -->
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f7f3e9" data-flatpaper-theme-color>
 
-<title>一个人吃饭的第七天 | 欢迎来我的的小窝</title>
-<meta name="description" content="一个人吃饭的第七天室友搬走了，新室友还要半个月才来。 于是这半个月，我进入了”一个人吃饭”的阶段。到今天，第七天。总结一下心得，全是血泪。 第一天：兴致勃勃 第一天我特别有精神。买了两斤排骨，一瓶酱油，一袋冰糖，准备做红烧排骨。 结果：糖化得有点糊，排骨炖过头了，肉一碰就散。整锅东西的颜色像隔夜的可乐。 我吃了两块，剩下的装进饭盒放冰箱。那盒东西现在还在冰箱...">
+<title>把房间清空的那个下午 | 欢迎来我的的小窝</title>
+<meta name="description" content="把房间清空的那个下午起因很简单：找不到一件夏天的短袖。 我翻了三个抽屉、两个收纳箱、一个挂在门后的袋子，最后在一个装旧书纸箱的最底下把它挖出来。衣服已经压得皱巴巴的，我拎着它站在房间中间，环顾四周，第一次意识到这个屋子有多满。 那天下午没有别的事，我就开始整理。 规则定得很简单：一年没用过的东西，处理掉。不留”以后可能会用”。因为我对”以后”一向没有判断力...">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一个人吃饭的第七天 | 欢迎来我的的小窝">
-<meta property="og:url" content="http://example.com/2026/11/20/05-%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%90%83%E9%A5%AD%E7%9A%84%E7%AC%AC%E4%B8%83%E5%A4%A9/">
+<meta property="og:title" content="把房间清空的那个下午 | 欢迎来我的的小窝">
+<meta property="og:url" content="http://example.com/2026/11/15/%E6%8A%8A%E6%88%BF%E9%97%B4%E6%B8%85%E7%A9%BA%E7%9A%84%E9%82%A3%E4%B8%AA%E4%B8%8B%E5%8D%88/">
 <meta property="og:site_name" content="欢迎来我的的小窝">
-<meta property="og:description" content="一个人吃饭的第七天室友搬走了，新室友还要半个月才来。 于是这半个月，我进入了”一个人吃饭”的阶段。到今天，第七天。总结一下心得，全是血泪。 第一天：兴致勃勃 第一天我特别有精神。买了两斤排骨，一瓶酱油，一袋冰糖，准备做红烧排骨。 结果：糖化得有点糊，排骨炖过头了，肉一碰就散。整锅东西的颜色像隔夜的可乐。 我吃了两块，剩下的装进饭盒放冰箱。那盒东西现在还在冰箱...">
+<meta property="og:description" content="把房间清空的那个下午起因很简单：找不到一件夏天的短袖。 我翻了三个抽屉、两个收纳箱、一个挂在门后的袋子，最后在一个装旧书纸箱的最底下把它挖出来。衣服已经压得皱巴巴的，我拎着它站在房间中间，环顾四周，第一次意识到这个屋子有多满。 那天下午没有别的事，我就开始整理。 规则定得很简单：一年没用过的东西，处理掉。不留”以后可能会用”。因为我对”以后”一向没有判断力...">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-11-20T12:30:00.000Z">
-<meta property="article:modified_time" content="2026-11-22T14:36:52.422Z">
+<meta property="article:published_time" content="2026-11-15T13:00:00.000Z">
+<meta property="article:modified_time" content="2026-11-22T14:36:55.658Z">
 <meta property="article:author" content="七七">
-<meta property="article:tag" content="日常">
-<meta property="article:tag" content="独居">
-<meta property="article:tag" content="幽默">
+<meta property="article:tag" content="生活">
+<meta property="article:tag" content="极简">
+<meta property="article:tag" content="整理">
 <meta name="twitter:card" content="summary">
-<link rel="canonical" href="http://example.com/2026/11/20/05-%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%90%83%E9%A5%AD%E7%9A%84%E7%AC%AC%E4%B8%83%E5%A4%A9/">
+<link rel="canonical" href="http://example.com/2026/11/15/%E6%8A%8A%E6%88%BF%E9%97%B4%E6%B8%85%E7%A9%BA%E7%9A%84%E9%82%A3%E4%B8%AA%E4%B8%8B%E5%8D%88/">
 
 <link rel="icon" href="/images/favicon.png" type="image/png">
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"一个人吃饭的第七天","name":"一个人吃饭的第七天 | 欢迎来我的的小窝","description":"一个人吃饭的第七天室友搬走了，新室友还要半个月才来。 于是这半个月，我进入了”一个人吃饭”的阶段。到今天，第七天。总结一下心得，全是血泪。 第一天：兴致勃勃 第一天我特别有精神。买了两斤排骨，一瓶酱油，一袋冰糖，准备做红烧排骨。 结果：糖化得有点糊，排骨炖过头了，肉一碰就散。整锅东西的颜色像隔夜的可乐。 我吃了两块，剩下的装进饭盒放冰箱。那盒东西现在还在冰箱...","url":"http://example.com/2026/11/20/05-%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%90%83%E9%A5%AD%E7%9A%84%E7%AC%AC%E4%B8%83%E5%A4%A9/","inLanguage":"zh-CN","isPartOf":{"@type":"WebSite","name":"欢迎来我的的小窝","url":"http://example.com/"},"mainEntityOfPage":"http://example.com/2026/11/20/05-%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%90%83%E9%A5%AD%E7%9A%84%E7%AC%AC%E4%B8%83%E5%A4%A9/","datePublished":"2026-11-20T12:30:00.000Z","dateModified":"2026-11-22T14:36:52.422Z","author":{"@type":"Person","name":"七七"},"publisher":{"@type":"Organization","name":"欢迎来我的的小窝"},"keywords":"日常, 独居, 幽默"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"把房间清空的那个下午","name":"把房间清空的那个下午 | 欢迎来我的的小窝","description":"把房间清空的那个下午起因很简单：找不到一件夏天的短袖。 我翻了三个抽屉、两个收纳箱、一个挂在门后的袋子，最后在一个装旧书纸箱的最底下把它挖出来。衣服已经压得皱巴巴的，我拎着它站在房间中间，环顾四周，第一次意识到这个屋子有多满。 那天下午没有别的事，我就开始整理。 规则定得很简单：一年没用过的东西，处理掉。不留”以后可能会用”。因为我对”以后”一向没有判断力...","url":"http://example.com/2026/11/15/%E6%8A%8A%E6%88%BF%E9%97%B4%E6%B8%85%E7%A9%BA%E7%9A%84%E9%82%A3%E4%B8%AA%E4%B8%8B%E5%8D%88/","inLanguage":"zh-CN","isPartOf":{"@type":"WebSite","name":"欢迎来我的的小窝","url":"http://example.com/"},"mainEntityOfPage":"http://example.com/2026/11/15/%E6%8A%8A%E6%88%BF%E9%97%B4%E6%B8%85%E7%A9%BA%E7%9A%84%E9%82%A3%E4%B8%AA%E4%B8%8B%E5%8D%88/","datePublished":"2026-11-15T13:00:00.000Z","dateModified":"2026-11-22T14:36:55.658Z","author":{"@type":"Person","name":"七七"},"publisher":{"@type":"Organization","name":"欢迎来我的的小窝"},"keywords":"生活, 极简, 整理"}</script>
 
 <script>
   (function () {
@@ -148,9 +239,9 @@
       
     
       
-        <a class="site-nav-link " href="/gallery/">
+        <a class="site-nav-link " href="/cover/">
           
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gallery-horizontal flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-gallery-horizontal"></use></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cover-horizontal flatpaper-icon" aria-hidden="true"><circle cx="12" cy="12" r="3"/></svg>
 
           <span>相册</span>
         </a>
@@ -210,18 +301,18 @@
           </button>
           <div class="site-nav-menu" role="menu">
             
-              <a role="menuitem" class="" href="/favorites/">
-                
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gift flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-gift"></use></svg>
-
-                <span>好物分享</span>
-              </a>
-            
               <a role="menuitem" class="" href="/movies/">
                 
 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-film flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-film"></use></svg>
 
-                <span>观影笔记</span>
+                <span>观影集</span>
+              </a>
+            
+              <a role="menuitem" class="" href="/books/">
+                
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-book"></use></svg>
+
+                <span>书单</span>
               </a>
             
           </div>
@@ -355,9 +446,9 @@
         
       
         
-          <a class="" href="/gallery/">
+          <a class="" href="/cover/">
             
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gallery-horizontal flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-gallery-horizontal"></use></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cover-horizontal flatpaper-icon" aria-hidden="true"><circle cx="12" cy="12" r="3"/></svg>
 
             <span>相册</span>
           </a>
@@ -417,18 +508,18 @@
             </button>
             <div class="drawer-nav-children">
               
-                <a class="" href="/favorites/">
-                  
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gift flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-gift"></use></svg>
-
-                  <span>好物分享</span>
-                </a>
-              
                 <a class="" href="/movies/">
                   
 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-film flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-film"></use></svg>
 
-                  <span>观影笔记</span>
+                  <span>观影集</span>
+                </a>
+              
+                <a class="" href="/books/">
+                  
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-book"></use></svg>
+
+                  <span>书单</span>
                 </a>
               
             </div>
@@ -581,9 +672,9 @@
         </li>
       
         <li>
-          <a class="recent-item" href="/2026/11/19/CentOS%207%20%E6%9C%80%E5%B0%8F%E5%8C%96%E5%AE%89%E8%A3%85%E5%88%9D%E5%A7%8B%E5%8C%96%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E%E4%B9%A6/">
-            <strong>CentOS 7 最小化安装初始化操作说明书</strong>
-            <em>2026-11-19</em>
+          <a class="recent-item" href="/2026/11/20/%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%90%83%E9%A5%AD%E7%9A%84%E7%AC%AC%E4%B8%83%E5%A4%A9/">
+            <strong>一个人吃饭的第七天</strong>
+            <em>2026-11-20</em>
           </a>
         </li>
       
@@ -614,17 +705,17 @@
         生活
       </a>
     
-    <h1>一个人吃饭的第七天</h1>
+    <h1>把房间清空的那个下午</h1>
     <div class="meta-line meta-line--article">
       <span class="meta-date">
 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-calendar"></use></svg>
-2026-11-20</span>
+2026-11-15</span>
       
         <span class="meta-tags">
           
 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-tag"></use></svg>
 
-          <a class="meta-tag-link" href="/tags/%E6%97%A5%E5%B8%B8/">#日常</a><a class="meta-tag-link" href="/tags/%E7%8B%AC%E5%B1%85/">#独居</a><a class="meta-tag-link" href="/tags/%E5%B9%BD%E9%BB%98/">#幽默</a>
+          <a class="meta-tag-link" href="/tags/%E7%94%9F%E6%B4%BB/">#生活</a><a class="meta-tag-link" href="/tags/%E6%9E%81%E7%AE%80/">#极简</a><a class="meta-tag-link" href="/tags/%E6%95%B4%E7%90%86/">#整理</a>
         </span>
       
     </div>
@@ -634,43 +725,21 @@
 
 
   <div class="article-content">
-    <h1 id="一个人吃饭的第七天"><a href="#一个人吃饭的第七天" class="headerlink" title="一个人吃饭的第七天"></a>一个人吃饭的第七天</h1><p>室友搬走了，新室友还要半个月才来。</p>
-<p>于是这半个月，我进入了”一个人吃饭”的阶段。到今天，第七天。总结一下心得，全是血泪。</p>
-<p><strong>第一天：兴致勃勃</strong></p>
-<p>第一天我特别有精神。买了两斤排骨，一瓶酱油，一袋冰糖，准备做红烧排骨。</p>
-<p>结果：糖化得有点糊，排骨炖过头了，肉一碰就散。整锅东西的颜色像隔夜的可乐。</p>
-<p>我吃了两块，剩下的装进饭盒放冰箱。那盒东西现在还在冰箱里，我今天刚看见，已经不敢打开了。</p>
-<p><strong>第二天：外卖</strong></p>
-<p>点了一份酸菜鱼。送达时间是 40 分钟，实际上等了 78 分钟。骑手打电话来说”不好意思刚送错了一单”。</p>
-<p>鱼很好吃。但一个人吃一份三人份的酸菜鱼，最后是靠意志力吃完的。剩的汤我倒掉了，倒的时候有点心疼，因为那汤真的很香。</p>
-<p><strong>第三天：认真规划</strong></p>
-<p>这天我做了计划：买半斤虾，半把青菜，两个鸡蛋，一条小排。理论上正好是一个人一顿的量。</p>
-<p>问题是菜市场不卖”半斤虾”。老板说，最少一斤。我说一斤吃不完。他说，那你明天还吃。</p>
-<p>我买了一斤。回家分成两份，一份冻起来。这个经验是这几天唯一有用的：<strong>菜量是给两个人准备的，你要自己分。</strong></p>
-<p><strong>第四天：偷懒</strong></p>
-<p>煮了一包面，加个蛋。十分钟。我坐在桌前吃的时候，忽然觉得有点安静，就打开了电视。</p>
-<p>电视上在播一档美食节目，主持人正在吃一大桌菜。我端着我的面，看着他吃。有点凄凉，但也很下饭。</p>
-<p><strong>第五天：失手</strong></p>
-<p>这天我做饭做得很成功，一个番茄炒蛋，一个蒜蓉菜心，还煮了点米饭。摆上桌的时候我甚至拍了一张照。</p>
-<p>然后我发现我吃不完。番茄炒蛋剩了半盘，菜心剩一半。米饭盛了小半碗，居然也剩了几口。</p>
-<p>第一次知道做饭成功也会剩菜。</p>
-<p><strong>第六天：翻冰箱</strong></p>
-<p>这天我翻出了第一天的红烧排骨、第二天的酸菜鱼打包盒、第三天冻的那份虾。</p>
-<p>我站在冰箱前沉思了一分钟，然后把它们全扔了。</p>
-<p>一个人吃饭最大的问题不是做饭多难，是<strong>你永远在扔东西</strong>。</p>
-<p><strong>第七天：和解</strong></p>
-<p>今天是第七天。我没做饭，没点外卖，下楼去买了个肉夹馍，坐在马路边的台阶上吃完了。</p>
-<p>吃完觉得挺香的。旁边有个小孩在追自己的影子，追了好一会儿。我看了一会儿，觉得这顿饭吃得挺完整。</p>
-<p><strong>结论</strong></p>
-<p>一个人吃饭，最难的不是”孤独”，是”量”。所有的菜谱都是四人份，所有的包装都是家庭装，所有的外卖都是 “满 30 减 15”。</p>
-<p>但你总会找到自己的节奏。比如我现在知道了：</p>
-<ul>
-<li>菜只买一顿的量，宁愿贵一点</li>
-<li>冰箱不要囤，囤的东西最后都会扔掉</li>
-<li>实在不想做，就下楼吃，坐在外面吃比坐在家里吃香</li>
-</ul>
-<p>还有六天新室友到。我打算最后一天好好做顿饭，把冰箱清干净。</p>
-<p>或者点外卖。</p>
+    <h1 id="把房间清空的那个下午"><a href="#把房间清空的那个下午" class="headerlink" title="把房间清空的那个下午"></a>把房间清空的那个下午</h1><p>起因很简单：找不到一件夏天的短袖。</p>
+<p>我翻了三个抽屉、两个收纳箱、一个挂在门后的袋子，最后在一个装旧书纸箱的最底下把它挖出来。衣服已经压得皱巴巴的，我拎着它站在房间中间，环顾四周，第一次意识到这个屋子有多满。</p>
+<p>那天下午没有别的事，我就开始整理。</p>
+<p>规则定得很简单：一年没用过的东西，处理掉。不留”以后可能会用”。因为我对”以后”一向没有判断力，而”一年”是实打实的证据。</p>
+<p>第一批扔出去的是衣服。三件买了没穿过的衬衫，标签还在，当时打折，觉得划算。两件”等我瘦了就穿”的裤子。还有一堆是”上班可以穿”但实际上一次都没上过身的。装了四大袋，拎下楼的时候手被勒出红印。</p>
+<p>第二批是书。这部分最难，因为我总觉得自己”会看”。但事实是，有几本在那里放了三年，塑封都没拆。我把它们摞在地上，拍了照，然后送给楼下爱看书的保安师傅。他翻了两页说，这个好，我女儿喜欢这种。我心里松了一下。</p>
+<p>第三批是各种”也许有用”的小东西：两个坏掉的充电线、五个数据线接口不匹配的转接头、一整盒化妆品小样、三个用了一半就换掉的笔记本、去年双十一囤的六瓶洗手液。</p>
+<p>最意外的是，清理完之后我发现，我真正在用的东西其实很少。</p>
+<p>两套常穿的衣服，一台电脑，一个水杯，几本书，洗漱的东西。剩下的那些，全都是因为我”担心不够”或者”舍不得”而留下的。它们安静地占着空间，我以为自己拥有它们，其实是它们在消耗我。</p>
+<p>傍晚的时候，房间空了差不多三分之一。我把地板拖了一遍，窗帘拆下来洗了，风从窗口进来，带着一点洗衣粉的味道。</p>
+<p>坐在床边，我第一次觉得这个房间是”我的”，而不是一个装东西的容器。</p>
+<p>那天晚上我睡得很好。不知道为什么，可能因为房间安静了。</p>
+<p>后来一个月里，我又慢慢扔掉了两袋东西。也买过东西——但我开始问自己一个问题：<strong>这个东西，我是会用它，还是会供着它？</strong></p>
+<p>这个方法挺管用的。双十一我什么都没买。</p>
+<p>房间不空，但至少，它不再让我喘不过气了。</p>
 
   </div>
 
@@ -726,18 +795,18 @@
 
   <nav class="article-actions">
     
-      <a class="article-action article-action--prev" href="/2026/11/22/Git%E6%9C%AC%E5%9C%B0%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%91%BD%E4%BB%A4%E6%89%8B%E5%86%8C/">
+      <a class="article-action article-action--prev" href="/2026/11/18/%E5%8D%81%E4%B8%80%E6%9C%88%E7%9A%84%E5%82%8D%E6%99%9A%E6%9D%A5%E5%BE%97%E5%BE%88%E5%BF%AB/">
         
 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-arrow-left"></use></svg>
 
         <span class="action-label">上一篇</span>
-        <span class="action-title">Git 本地提交到远程仓库命令手册</span>
+        <span class="action-title">十一月的傍晚来得很快</span>
       </a>
     
     
-      <a class="article-action article-action--next" href="/2026/11/19/CentOS%207%20%E6%9C%80%E5%B0%8F%E5%8C%96%E5%AE%89%E8%A3%85%E5%88%9D%E5%A7%8B%E5%8C%96%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E%E4%B9%A6/">
+      <a class="article-action article-action--next" href="/2026/11/13/flatpaper%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%E6%95%99%E7%A8%8B/">
         <span class="action-label">下一篇</span>
-        <span class="action-title">CentOS 7 最小化安装初始化操作说明书</span>
+        <span class="action-title">flatpaper 主题 音乐播放器搭建</span>
         
 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-arrow-right"></use></svg>
 
@@ -768,7 +837,7 @@
     </header>
     <div class="related-paper__grid">
       
-        <a class="related-card" href="/2026/11/12/02-%E5%9C%A8%E8%8F%9C%E5%B8%82%E5%9C%BA%E9%80%9B%E4%BA%86%E5%8D%8A%E5%B0%8F%E6%97%B6/">
+        <a class="related-card" href="/2026/11/20/%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%90%83%E9%A5%AD%E7%9A%84%E7%AC%AC%E4%B8%83%E5%A4%A9/">
           <span class="related-card__thumb">
             
 <div class="paper-thumb paper-thumb-0 paper-thumb--cover">
@@ -779,33 +848,17 @@
 
           </span>
           <span class="related-card__body">
-            <strong class="related-card__title">在菜市场逛了半小时</strong>
-            <em class="related-card__date">2026-11-12</em>
+            <strong class="related-card__title">一个人吃饭的第七天</strong>
+            <em class="related-card__date">2026-11-20</em>
           </span>
         </a>
       
-        <a class="related-card" href="/2026/11/08/01-%E5%91%A8%E6%9C%AB%E7%9A%84%E7%AC%AC%E4%B8%80%E6%9D%AF%E5%92%96%E5%95%A1/">
+        <a class="related-card" href="/2026/11/18/%E5%8D%81%E4%B8%80%E6%9C%88%E7%9A%84%E5%82%8D%E6%99%9A%E6%9D%A5%E5%BE%97%E5%BE%88%E5%BF%AB/">
           <span class="related-card__thumb">
             
 <div class="paper-thumb paper-thumb-1 paper-thumb--cover">
   
-    <img class="paper-thumb__img" src="/images/gallery/photo4.jpg" alt="周末的第一杯咖啡" loading="lazy" referrerpolicy="no-referrer">
-  
-</div>
-
-          </span>
-          <span class="related-card__body">
-            <strong class="related-card__title">周末的第一杯咖啡</strong>
-            <em class="related-card__date">2026-11-08</em>
-          </span>
-        </a>
-      
-        <a class="related-card" href="/2026/11/18/04-%E5%8D%81%E4%B8%80%E6%9C%88%E7%9A%84%E5%82%8D%E6%99%9A%E6%9D%A5%E5%BE%97%E5%BE%88%E5%BF%AB/">
-          <span class="related-card__thumb">
-            
-<div class="paper-thumb paper-thumb-2 paper-thumb--cover">
-  
-    <img class="paper-thumb__img" src="/images/cover/notebook.webp" alt="" loading="lazy" referrerpolicy="no-referrer">
+    <img class="paper-thumb__img" src="/images/cover/mountain.webp" alt="" loading="lazy" referrerpolicy="no-referrer">
   
 </div>
 
@@ -816,19 +869,35 @@
           </span>
         </a>
       
-        <a class="related-card" href="/2026/11/15/03-%E6%8A%8A%E6%88%BF%E9%97%B4%E6%B8%85%E7%A9%BA%E7%9A%84%E9%82%A3%E4%B8%AA%E4%B8%8B%E5%8D%88/">
+        <a class="related-card" href="/2026/11/12/%E5%9C%A8%E8%8F%9C%E5%B8%82%E5%9C%BA%E9%80%9B%E4%BA%86%E5%8D%8A%E5%B0%8F%E6%97%B6/">
           <span class="related-card__thumb">
             
-<div class="paper-thumb paper-thumb-0 paper-thumb--cover">
+<div class="paper-thumb paper-thumb-2 paper-thumb--cover">
   
-    <img class="paper-thumb__img" src="/images/cover/port.webp" alt="" loading="lazy" referrerpolicy="no-referrer">
+    <img class="paper-thumb__img" src="/images/cover/notebook.webp" alt="" loading="lazy" referrerpolicy="no-referrer">
   
 </div>
 
           </span>
           <span class="related-card__body">
-            <strong class="related-card__title">把房间清空的那个下午</strong>
-            <em class="related-card__date">2026-11-15</em>
+            <strong class="related-card__title">在菜市场逛了半小时</strong>
+            <em class="related-card__date">2026-11-12</em>
+          </span>
+        </a>
+      
+        <a class="related-card" href="/2026/11/08/%E5%91%A8%E6%9C%AB%E7%9A%84%E7%AC%AC%E4%B8%80%E6%9D%AF%E5%92%96%E5%95%A1/">
+          <span class="related-card__thumb">
+            
+<div class="paper-thumb paper-thumb-0 paper-thumb--cover">
+  
+    <img class="paper-thumb__img" src="/images/cover/photo4.jpg" alt="周末的第一杯咖啡" loading="lazy" referrerpolicy="no-referrer">
+  
+</div>
+
+          </span>
+          <span class="related-card__body">
+            <strong class="related-card__title">周末的第一杯咖啡</strong>
+            <em class="related-card__date">2026-11-08</em>
           </span>
         </a>
       

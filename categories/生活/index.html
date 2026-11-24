@@ -1,7 +1,98 @@
 <!doctype html>
 
 <html lang="zh-CN">
-<head>
+<head><!-- hexo injector head_begin start --><style type="text/css">.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end -->
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f7f3e9" data-flatpaper-theme-color>
@@ -140,9 +231,9 @@
       
     
       
-        <a class="site-nav-link " href="/gallery/">
+        <a class="site-nav-link " href="/cover/">
           
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gallery-horizontal flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-gallery-horizontal"></use></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cover-horizontal flatpaper-icon" aria-hidden="true"><circle cx="12" cy="12" r="3"/></svg>
 
           <span>相册</span>
         </a>
@@ -202,18 +293,18 @@
           </button>
           <div class="site-nav-menu" role="menu">
             
-              <a role="menuitem" class="" href="/favorites/">
-                
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gift flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-gift"></use></svg>
-
-                <span>好物分享</span>
-              </a>
-            
               <a role="menuitem" class="" href="/movies/">
                 
 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-film flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-film"></use></svg>
 
-                <span>观影笔记</span>
+                <span>观影集</span>
+              </a>
+            
+              <a role="menuitem" class="" href="/books/">
+                
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-book"></use></svg>
+
+                <span>书单</span>
               </a>
             
           </div>
@@ -347,9 +438,9 @@
         
       
         
-          <a class="" href="/gallery/">
+          <a class="" href="/cover/">
             
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gallery-horizontal flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-gallery-horizontal"></use></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cover-horizontal flatpaper-icon" aria-hidden="true"><circle cx="12" cy="12" r="3"/></svg>
 
             <span>相册</span>
           </a>
@@ -409,18 +500,18 @@
             </button>
             <div class="drawer-nav-children">
               
-                <a class="" href="/favorites/">
-                  
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gift flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-gift"></use></svg>
-
-                  <span>好物分享</span>
-                </a>
-              
                 <a class="" href="/movies/">
                   
 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-film flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-film"></use></svg>
 
-                  <span>观影笔记</span>
+                  <span>观影集</span>
+                </a>
+              
+                <a class="" href="/books/">
+                  
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-book"></use></svg>
+
+                  <span>书单</span>
                 </a>
               
             </div>
@@ -598,31 +689,31 @@
   
   <div class="archive-list">
     
-      <a class="archive-item" href="/2026/11/20/05-%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%90%83%E9%A5%AD%E7%9A%84%E7%AC%AC%E4%B8%83%E5%A4%A9/">
+      <a class="archive-item" href="/2026/11/20/%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%90%83%E9%A5%AD%E7%9A%84%E7%AC%AC%E4%B8%83%E5%A4%A9/">
         <span>2026-11-20</span>
         <strong>一个人吃饭的第七天</strong>
         <em></em>
       </a>
     
-      <a class="archive-item" href="/2026/11/18/04-%E5%8D%81%E4%B8%80%E6%9C%88%E7%9A%84%E5%82%8D%E6%99%9A%E6%9D%A5%E5%BE%97%E5%BE%88%E5%BF%AB/">
+      <a class="archive-item" href="/2026/11/18/%E5%8D%81%E4%B8%80%E6%9C%88%E7%9A%84%E5%82%8D%E6%99%9A%E6%9D%A5%E5%BE%97%E5%BE%88%E5%BF%AB/">
         <span>2026-11-18</span>
         <strong>十一月的傍晚来得很快</strong>
         <em></em>
       </a>
     
-      <a class="archive-item" href="/2026/11/15/03-%E6%8A%8A%E6%88%BF%E9%97%B4%E6%B8%85%E7%A9%BA%E7%9A%84%E9%82%A3%E4%B8%AA%E4%B8%8B%E5%8D%88/">
+      <a class="archive-item" href="/2026/11/15/%E6%8A%8A%E6%88%BF%E9%97%B4%E6%B8%85%E7%A9%BA%E7%9A%84%E9%82%A3%E4%B8%AA%E4%B8%8B%E5%8D%88/">
         <span>2026-11-15</span>
         <strong>把房间清空的那个下午</strong>
         <em></em>
       </a>
     
-      <a class="archive-item" href="/2026/11/12/02-%E5%9C%A8%E8%8F%9C%E5%B8%82%E5%9C%BA%E9%80%9B%E4%BA%86%E5%8D%8A%E5%B0%8F%E6%97%B6/">
+      <a class="archive-item" href="/2026/11/12/%E5%9C%A8%E8%8F%9C%E5%B8%82%E5%9C%BA%E9%80%9B%E4%BA%86%E5%8D%8A%E5%B0%8F%E6%97%B6/">
         <span>2026-11-12</span>
         <strong>在菜市场逛了半小时</strong>
         <em></em>
       </a>
     
-      <a class="archive-item" href="/2026/11/08/01-%E5%91%A8%E6%9C%AB%E7%9A%84%E7%AC%AC%E4%B8%80%E6%9D%AF%E5%92%96%E5%95%A1/">
+      <a class="archive-item" href="/2026/11/08/%E5%91%A8%E6%9C%AB%E7%9A%84%E7%AC%AC%E4%B8%80%E6%9D%AF%E5%92%96%E5%95%A1/">
         <span>2026-11-08</span>
         <strong>周末的第一杯咖啡</strong>
         <em></em>
@@ -678,7 +769,7 @@
         </li>
       
         <li>
-          <a class="recent-item" href="/2026/11/20/05-%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%90%83%E9%A5%AD%E7%9A%84%E7%AC%AC%E4%B8%83%E5%A4%A9/">
+          <a class="recent-item" href="/2026/11/20/%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%90%83%E9%A5%AD%E7%9A%84%E7%AC%AC%E4%B8%83%E5%A4%A9/">
             <strong>一个人吃饭的第七天</strong>
             <em>2026-11-20</em>
           </a>

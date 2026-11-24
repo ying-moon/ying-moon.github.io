@@ -26,9 +26,6 @@ body.gm-night {
 }
 
 /* 音乐馆页头 */
-body.gm-has-page-player .article-header .label-pill {
-  display: none;
-}
 body.gm-has-page-player .article-header h1 {
   font-family: Georgia, "Times New Roman", "Songti SC", serif;
   font-size: 38px;
@@ -101,7 +98,7 @@ body.gm-night .gm-card__bg {
 
 /* 左侧：唱片与播放控制 */
 .gm-card--player {
-  height: 500px;
+  height: 450px;
   padding: 30px 26px 26px;
   display: flex;
   flex-direction: column;
@@ -305,7 +302,7 @@ body.gm-night .gm-dot {
 
 /* 右侧：歌词 / 歌单 */
 .gm-card--side {
-  height: 500px;
+  height: 450px;
   display: flex;
   flex-direction: column;
   overflow: hidden;

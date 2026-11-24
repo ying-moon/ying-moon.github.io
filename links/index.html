@@ -1,7 +1,98 @@
 <!doctype html>
 
 <html lang="zh-CN" data-fancybox-enabled="1">
-<head>
+<head><!-- hexo injector head_begin start --><style type="text/css">.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end -->
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f7f3e9" data-flatpaper-theme-color>
@@ -143,9 +234,9 @@
       
     
       
-        <a class="site-nav-link " href="/gallery/">
+        <a class="site-nav-link " href="/cover/">
           
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gallery-horizontal flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-gallery-horizontal"></use></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cover-horizontal flatpaper-icon" aria-hidden="true"><circle cx="12" cy="12" r="3"/></svg>
 
           <span>相册</span>
         </a>
@@ -205,18 +296,18 @@
           </button>
           <div class="site-nav-menu" role="menu">
             
-              <a role="menuitem" class="" href="/favorites/">
-                
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gift flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-gift"></use></svg>
-
-                <span>好物分享</span>
-              </a>
-            
               <a role="menuitem" class="" href="/movies/">
                 
 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-film flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-film"></use></svg>
 
-                <span>观影笔记</span>
+                <span>观影集</span>
+              </a>
+            
+              <a role="menuitem" class="" href="/books/">
+                
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-book"></use></svg>
+
+                <span>书单</span>
               </a>
             
           </div>
@@ -350,9 +441,9 @@
         
       
         
-          <a class="" href="/gallery/">
+          <a class="" href="/cover/">
             
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gallery-horizontal flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-gallery-horizontal"></use></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cover-horizontal flatpaper-icon" aria-hidden="true"><circle cx="12" cy="12" r="3"/></svg>
 
             <span>相册</span>
           </a>
@@ -412,18 +503,18 @@
             </button>
             <div class="drawer-nav-children">
               
-                <a class="" href="/favorites/">
-                  
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gift flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-gift"></use></svg>
-
-                  <span>好物分享</span>
-                </a>
-              
                 <a class="" href="/movies/">
                   
 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-film flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-film"></use></svg>
 
-                  <span>观影笔记</span>
+                  <span>观影集</span>
+                </a>
+              
+                <a class="" href="/books/">
+                  
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-book"></use></svg>
+
+                  <span>书单</span>
                 </a>
               
             </div>
@@ -760,6 +851,40 @@
                 <strong class="friend-card__name">TinyPNG</strong>
                 
                   <span class="friend-card__desc">图片压缩神器，博客配图必备</span>
+                
+              </div>
+            </a>
+            
+          </li>
+        
+          <li class="friend-card friend-card--tape">
+            <a class="friend-card__link" href="https://imgchr.com/" target="_blank" rel="noopener noreferrer" title="床图 · 路过图床-高速稳定的图片上传和外链服务">
+              <div class="friend-card__avatar-wrap">
+                
+                  <img class="friend-card__avatar" src="https://tinypng.com/favicon.ico" alt="床图" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='/images/icon-error.webp'">
+                
+              </div>
+              <div class="friend-card__body">
+                <strong class="friend-card__name">床图</strong>
+                
+                  <span class="friend-card__desc">路过图床-高速稳定的图片上传和外链服务</span>
+                
+              </div>
+            </a>
+            
+          </li>
+        
+          <li class="friend-card friend-card--tape">
+            <a class="friend-card__link" href="https://mongodb.ac.cn/docs/guides/atlas/account/" target="_blank" rel="noopener noreferrer" title="床图 · 注册MongoDB账户">
+              <div class="friend-card__avatar-wrap">
+                
+                  <img class="friend-card__avatar" src="https://tinypng.com/favicon.ico" alt="床图" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='/images/icon-error.webp'">
+                
+              </div>
+              <div class="friend-card__body">
+                <strong class="friend-card__name">床图</strong>
+                
+                  <span class="friend-card__desc">注册MongoDB账户</span>
                 
               </div>
             </a>

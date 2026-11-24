@@ -1,7 +1,98 @@
 <!doctype html>
 
 <html lang="zh-CN" data-fancybox-enabled="1">
-<head>
+<head><!-- hexo injector head_begin start --><style type="text/css">.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end -->
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f7f3e9" data-flatpaper-theme-color>
@@ -14,18 +105,18 @@
 <meta property="og:site_name" content="欢迎来我的的小窝">
 <meta property="og:description" content="买下第一本手账本的那个下午，我在文具店站了二十分钟，只为挑一卷顺眼的胶带。今天终于落笔，写下属于我的第一页。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/images/gallery/photo5.jpg">
+<meta property="og:image" content="http://example.com/images/cover/photo5.jpg">
 <meta property="article:published_time" content="2026-11-06T16:50:00.000Z">
-<meta property="article:modified_time" content="2026-11-22T17:10:20.821Z">
+<meta property="article:modified_time" content="2026-11-24T15:33:34.080Z">
 <meta property="article:author" content="七七">
 <meta property="article:tag" content="生活">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/images/gallery/photo5.jpg">
+<meta name="twitter:image" content="http://example.com/images/cover/photo5.jpg">
 <link rel="canonical" href="http://example.com/2026/11/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%89%8B%E8%B4%A6/">
 
 <link rel="icon" href="/images/favicon.png" type="image/png">
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"我的第一篇手账","name":"我的第一篇手账 | 欢迎来我的的小窝","description":"买下第一本手账本的那个下午，我在文具店站了二十分钟，只为挑一卷顺眼的胶带。今天终于落笔，写下属于我的第一页。","url":"http://example.com/2026/11/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%89%8B%E8%B4%A6/","inLanguage":"zh-CN","isPartOf":{"@type":"WebSite","name":"欢迎来我的的小窝","url":"http://example.com/"},"image":["http://example.com/images/gallery/photo5.jpg"],"mainEntityOfPage":"http://example.com/2026/11/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%89%8B%E8%B4%A6/","datePublished":"2026-11-06T16:50:00.000Z","dateModified":"2026-11-22T17:10:20.821Z","author":{"@type":"Person","name":"七七"},"publisher":{"@type":"Organization","name":"欢迎来我的的小窝"},"keywords":"生活"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"我的第一篇手账","name":"我的第一篇手账 | 欢迎来我的的小窝","description":"买下第一本手账本的那个下午，我在文具店站了二十分钟，只为挑一卷顺眼的胶带。今天终于落笔，写下属于我的第一页。","url":"http://example.com/2026/11/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%89%8B%E8%B4%A6/","inLanguage":"zh-CN","isPartOf":{"@type":"WebSite","name":"欢迎来我的的小窝","url":"http://example.com/"},"image":["http://example.com/images/cover/photo5.jpg"],"mainEntityOfPage":"http://example.com/2026/11/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%89%8B%E8%B4%A6/","datePublished":"2026-11-06T16:50:00.000Z","dateModified":"2026-11-24T15:33:34.080Z","author":{"@type":"Person","name":"七七"},"publisher":{"@type":"Organization","name":"欢迎来我的的小窝"},"keywords":"生活"}</script>
 
 <script>
   (function () {
@@ -151,9 +242,9 @@
       
     
       
-        <a class="site-nav-link " href="/gallery/">
+        <a class="site-nav-link " href="/cover/">
           
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gallery-horizontal flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-gallery-horizontal"></use></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cover-horizontal flatpaper-icon" aria-hidden="true"><circle cx="12" cy="12" r="3"/></svg>
 
           <span>相册</span>
         </a>
@@ -213,18 +304,18 @@
           </button>
           <div class="site-nav-menu" role="menu">
             
-              <a role="menuitem" class="" href="/favorites/">
-                
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gift flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-gift"></use></svg>
-
-                <span>好物分享</span>
-              </a>
-            
               <a role="menuitem" class="" href="/movies/">
                 
 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-film flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-film"></use></svg>
 
-                <span>观影笔记</span>
+                <span>观影集</span>
+              </a>
+            
+              <a role="menuitem" class="" href="/books/">
+                
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-book"></use></svg>
+
+                <span>书单</span>
               </a>
             
           </div>
@@ -358,9 +449,9 @@
         
       
         
-          <a class="" href="/gallery/">
+          <a class="" href="/cover/">
             
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gallery-horizontal flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-gallery-horizontal"></use></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cover-horizontal flatpaper-icon" aria-hidden="true"><circle cx="12" cy="12" r="3"/></svg>
 
             <span>相册</span>
           </a>
@@ -420,18 +511,18 @@
             </button>
             <div class="drawer-nav-children">
               
-                <a class="" href="/favorites/">
-                  
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gift flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-gift"></use></svg>
-
-                  <span>好物分享</span>
-                </a>
-              
                 <a class="" href="/movies/">
                   
 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-film flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-film"></use></svg>
 
-                  <span>观影笔记</span>
+                  <span>观影集</span>
+                </a>
+              
+                <a class="" href="/books/">
+                  
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-book"></use></svg>
+
+                  <span>书单</span>
                 </a>
               
             </div>
@@ -584,7 +675,7 @@
         </li>
       
         <li>
-          <a class="recent-item" href="/2026/11/20/05-%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%90%83%E9%A5%AD%E7%9A%84%E7%AC%AC%E4%B8%83%E5%A4%A9/">
+          <a class="recent-item" href="/2026/11/20/%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%90%83%E9%A5%AD%E7%9A%84%E7%AC%AC%E4%B8%83%E5%A4%A9/">
             <strong>一个人吃饭的第七天</strong>
             <em>2026-11-20</em>
           </a>
@@ -662,7 +753,7 @@
 <p>第一篇写完了，明天继续。</p>
 <hr>
 
-    <div id="aplayer-iMDlPFVz" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-EQpheDVF" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="歌曲ID" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"
     ></div>
 <blockquote>
@@ -723,7 +814,7 @@
 
   <nav class="article-actions">
     
-      <a class="article-action article-action--prev" href="/2026/11/08/01-%E5%91%A8%E6%9C%AB%E7%9A%84%E7%AC%AC%E4%B8%80%E6%9D%AF%E5%92%96%E5%95%A1/">
+      <a class="article-action article-action--prev" href="/2026/11/08/%E5%91%A8%E6%9C%AB%E7%9A%84%E7%AC%AC%E4%B8%80%E6%9D%AF%E5%92%96%E5%95%A1/">
         
 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left flatpaper-icon flatpaper-icon--lucide" aria-hidden="true"><use href="/icons.svg#flatpaper-icon-lucide-arrow-left"></use></svg>
 
@@ -770,7 +861,7 @@
             
 <div class="paper-thumb paper-thumb-0 paper-thumb--cover">
   
-    <img class="paper-thumb__img" src="/images/gallery/photo1.jpg" alt="我与世界只差一个你观后感" loading="lazy" referrerpolicy="no-referrer">
+    <img class="paper-thumb__img" src="/images/cover/photo7.jpg" alt="我与世界只差一个你观后感" loading="lazy" referrerpolicy="no-referrer">
   
 </div>
 
@@ -781,7 +872,7 @@
           </span>
         </a>
       
-        <a class="related-card" href="/2026/11/15/03-%E6%8A%8A%E6%88%BF%E9%97%B4%E6%B8%85%E7%A9%BA%E7%9A%84%E9%82%A3%E4%B8%AA%E4%B8%8B%E5%8D%88/">
+        <a class="related-card" href="/2026/11/15/%E6%8A%8A%E6%88%BF%E9%97%B4%E6%B8%85%E7%A9%BA%E7%9A%84%E9%82%A3%E4%B8%AA%E4%B8%8B%E5%8D%88/">
           <span class="related-card__thumb">
             
 <div class="paper-thumb paper-thumb-1 paper-thumb--cover">

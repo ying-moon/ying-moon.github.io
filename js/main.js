@@ -2236,11 +2236,11 @@
       if (typeof window.Fancybox === 'undefined') return;
       try {
         if (window.Fancybox.unbind) {
-          window.Fancybox.unbind('[data-fancybox="gallery"]');
+          window.Fancybox.unbind('[data-fancybox="cover"]');
           window.Fancybox.unbind('[data-fancybox="guestbook-wall"]');
         }
       } catch (error) { /* noop */ }
-      window.Fancybox.bind('[data-fancybox="gallery"]');
+      window.Fancybox.bind('[data-fancybox="cover"]');
       window.Fancybox.bind('[data-fancybox="guestbook-wall"]');
     }
     if (document.readyState === 'complete') bindFancybox();
