@@ -747,6 +747,92 @@
 
   
 
+<section class="post-comments" aria-label="评论">
+  <h2 class="post-comments__title">评论</h2>
+
+  
+    <div id="twikoo-comments"></div>
+
+    <script>
+    (function () {
+      window.FLATPAPER_COMMENTS = window.FLATPAPER_COMMENTS || {
+        queue: {},
+        loading: {},
+        register: function (config) {
+          var self = this;
+          var provider = config.provider;
+
+          if (config.css && !document.querySelector('link[data-flatpaper-comments-css="' + provider + '"]')) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = config.css;
+            link.setAttribute('data-flatpaper-comments-css', provider);
+            document.head.appendChild(link);
+          }
+
+          self.queue[provider] = self.queue[provider] || [];
+          self.queue[provider].push(config.init);
+
+          function flush() {
+            var callbacks = self.queue[provider] || [];
+            self.queue[provider] = [];
+            callbacks.forEach(function (callback) {
+              try { callback(); }
+              catch (error) { console.error('[FlatPaper] comment init failed:', error); }
+            });
+          }
+
+          if (config.isReady()) {
+            flush();
+            return;
+          }
+
+          if (self.loading[provider]) return;
+          self.loading[provider] = true;
+
+          var script = document.createElement('script');
+          script.src = config.cdn;
+          script.async = true;
+          script.onload = function () {
+            self.loading[provider] = false;
+            flush();
+          };
+          script.onerror = function () {
+            self.loading[provider] = false;
+            self.queue[provider] = [];
+            if (typeof config.onError === 'function') config.onError();
+          };
+          document.head.appendChild(script);
+        }
+      };
+    })();
+    </script>
+
+    
+    <script>
+    window.FLATPAPER_COMMENTS.register({
+      provider: 'twikoo',
+      cdn: "https://cdn.jsdelivr.net/npm/twikoo@2/dist/twikoo.all.min.js",
+      isReady: function () {
+        return !!(window.twikoo && typeof window.twikoo.init === 'function');
+      },
+      init: function () {
+        if (!document.querySelector('#twikoo-comments')) return;
+        window.__flatpaperTwikoo = window.twikoo.init({
+          el: '#twikoo-comments',
+          envId: "https://twikoo-netlify-3uny.netlify.app/.netlify/functions/twikoo"
+        });
+      },
+      onError: function () {
+        var node = document.querySelector('#twikoo-comments');
+        if (node) node.textContent = "评论脚本加载失败，请稍后刷新重试。";
+      }
+    });
+    </script>
+    
+  
+</section>
+
 
 </article>
 </div>
