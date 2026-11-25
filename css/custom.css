@@ -81,6 +81,21 @@
 
 }
 .media-body p {
-  margin: 0; font-size: 15px; line-height: 1.7;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
   color: #ffffff;
 }
+
+
+/*留言板*/
+.guestbook-tip {
+  text-align: center;
+  padding: 20px;
+  background: #f7f3eb;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  color: #666;
+  border: 1px dashed #ccc;
+}
+
